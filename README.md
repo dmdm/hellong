@@ -1,31 +1,41 @@
-# Hellong
+HelloNg
+=======
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
+faich Fiadh fiú fogh feum!
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is no finished product!
 
-## Code scaffolding
+This is kind of "HelloLDAP, part 2", an elaboration on using @ngrx/store.
+I also exchanged BS4 for angular material.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Build
+Best viewed in the latest Chrome browser with enabled experimental web flag:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+ - PointerEvents: have not yet arrived in FF
+ - ResizeObserver: ditto, and experimental in Chrome
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Installation
+------------
 
-## Running end-to-end tests
+For the client install angular-cli as described on their page and then perform the usual
+"npm install" chore.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Since we are using HelloLDAP's server, perform its installation inside a Python virtual
+environment as well.
 
-## Deploying to Github Pages
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+Run
+---
 
-## Further help
+Go to HelloLDAP and start its server with:
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    serve -vv
+
+
+Then come back to HelloNg and start the development server:
+
+    ng serve --proxy-config proxy.conf.json
+
+Navigate your browser to http://localhost:4200. N.b. that we are proxying all API calls through to the
+HelloLDAP server.

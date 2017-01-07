@@ -1,0 +1,28 @@
+@import '~@angular/material/core/theming/all-theme';
+
+@mixin wm-window-component-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $accent: map-get($theme, accent);
+
+
+  app-wm-window {
+    border: 1px solid md-color($foreground, divider);
+    background: md-color($background, dialog);
+  }
+
+  .app-wmWindow-titlebar {
+    border-bottom: 1px solid md-color($foreground, divider);
+    background: md-color($background, card);
+    color: md-color($accent, default-contrast);
+  }
+
+  .focused {
+    background: md-color($accent, 100);
+    color: md-color($accent, default-contrast);
+  }
+
+  .flash-on-create {
+    background-color: md-color($accent);
+  }
+}

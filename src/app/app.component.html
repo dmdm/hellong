@@ -1,4 +1,47 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<div id="app-outer-container" [class.dark-theme]="isDarkTheme">
+    <md-sidenav-container class="app-sidenav-container">
+
+        <md-sidenav class="app-sidenav1" #sidenav1 mode="over">
+            <nav>
+                <md-nav-list>
+                    <a md-list-item (click)="sidenav1.close()" routerLink="/">Home</a>
+                    <a md-list-item (click)="sidenav1.close()" routerLink="/desktop">Desktop</a>
+                    <a md-list-item (click)="sidenav1.close()" routerLink="/clicktest">Click Test</a>
+                    <a md-list-item (click)="sidenav1.close()" routerLink="/test-materials">Test Materials</a>
+                    <a md-list-item (click)="sidenav2.toggle()">Sidenav 2</a>
+                </md-nav-list>
+            </nav>
+        </md-sidenav>
+
+        <md-sidenav #sidenav2 align="end">
+            Sidenav 2.
+        </md-sidenav>
+
+        <div id="app-inner-container">
+            <app-foo-bar [appTitle]="appTitle"
+                         [sidenav]="sidenav1"
+
+                         [isLoggedIn]="isLoggedIn$|async"
+                         (onLogin)="openLoginDialog()"
+                         [username]="username$|async"
+                         [jwtTime]="jwtTime$|async"
+                         (onRefreshJwt)="refreshJwt()"
+                         (onLogout)="logout()"
+
+                         (onToggleDarkTheme)="toggleDarkTheme()">
+            </app-foo-bar>
+            <div id="app-content-container">
+                <div id="app-page-container">
+                    <router-outlet></router-outlet>
+                </div>
+
+                <footer>
+                    &copy; 2016 Dirk Makowski
+                </footer>
+            </div>
+
+        </div>
+
+
+    </md-sidenav-container>
+</div>

@@ -15,10 +15,10 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "pym",
+      "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.scss"
+        "./assets/css/app-theme.scss"
       ],
       "scripts": [],
       "environments": {

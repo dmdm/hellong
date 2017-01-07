@@ -1,0 +1,15 @@
+<div class="boxcontainer">
+    <div id="box1" class="box box1" (click)="onClick($event)" (pointermove)="onPointerMove($event)">
+        <div id="box2" class="box box2" (click)="onClick($event)">
+            <div id="box3" class="box box3" (click)="onClick($event)">
+            </div>
+        </div>
+    </div>
+    <div class="logbox">
+        <div *ngFor="let m of messages; let i=index">{{i}}: {{m}}</div>
+    </div>
+</div>
+<div class="panel">
+    <button md-button (click)="messages=[]">Clear</button>
+    <div>Screen: ({{event.screenX}}, {{event.screenY}}) | Client: ({{event.clientX}}, {{event.clientY}}) | Page: ({{event.pageX}}, {{event.pageY}})</div>
+</div>

@@ -1,0 +1,16 @@
+<div *ngIf="hasTitlebar" class="app-wmWindow-titlebar" [ngClass]="{focused:isFocused}">
+    <button md-icon-button [mdMenuTriggerFor]="windowMenu"><i class="material-icons">menu</i></button>
+    <div #title class="app-wmWindow-title">{{wmWindow.id}}</div>
+    <button md-icon-button (click)="toggleMaximize()"><i *ngIf="! isMaximized" class="material-icons">arrow_upward</i><i *ngIf="isMaximized" class="material-icons">arrow_downward</i></button>
+    <button md-icon-button (click)="close()"><i class="material-icons">clear</i></button>
+</div>
+<div #content class="app-wmWindow-content">
+    <p>{{wmWindow.id}}, z:{{wmWindow.zIndex}}</p>
+    <p>{{foo}}</p>
+</div>
+
+<md-menu #windowMenu="mdMenu">
+  <button md-menu-item>Foo</button>
+  <button md-menu-item>Foo bar baz</button>
+  <button md-menu-item>Lirum larum löffelstiel</button>
+</md-menu>

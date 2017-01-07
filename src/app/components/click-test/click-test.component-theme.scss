@@ -1,0 +1,47 @@
+@import '~@angular/material/core/theming/all-theme';
+
+@mixin click-test-component-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $accent: map-get($theme, accent);
+
+
+  app-click-test {
+    border-color: md-color($accent, 700);
+
+    .flash {
+      background-color: md-color($accent, 700);
+    }
+
+    .box {
+      background-color: md-color($background, background);
+    }
+
+    .box1 {
+      border-color: md-color($accent, 500);
+    }
+
+    .box1-flash {
+      background-color: md-color($accent, 500);
+    }
+
+    .box2 {
+      border-color: md-color($accent, 300);
+    }
+
+    .box2-flash {
+      background-color: md-color($accent, 300);
+    }
+
+    .box3 {
+      border-color: md-color($accent, 100);
+    }
+
+    .box3-flash {
+      background-color: md-color($accent, 100);
+    }
+  }
+
+
+
+}

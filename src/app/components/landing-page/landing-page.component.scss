@@ -1,0 +1,11 @@
+@import '~@angular/material/core/theming/all-theme';
+@import '../../../assets/css/theme-variables';
+
+
+:host {
+  display: block;
+  padding: $spacer-outside;
+
+}
+
+md-card { margin-bottom: 2ex; }

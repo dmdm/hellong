@@ -1,0 +1,19 @@
+@import '../../../../node_modules/@angular/material/core/theming/all-theme';
+
+:host {
+  //position: fixed;
+  //left: 0;
+  //top: 0;
+  //right: 0;
+  //bottom: auto;
+  //z-index: 1;
+}
+
+.bar-section {
+  padding: 2px 4px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  font-size: $md-body-font-size-base;
+  font-weight: 500;
+}

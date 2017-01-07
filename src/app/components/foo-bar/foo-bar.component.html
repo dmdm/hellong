@@ -1,0 +1,37 @@
+<md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.toggle()">
+        <i class="material-icons">menu</i>
+    </button>
+
+    <span class="bar-section md-shadow ">
+        <a class="link-as-text" routerLink="/">{{appTitle}}</a>
+    </span>
+
+    <button md-button *ngIf="isLoggedIn" [mdMenuTriggerFor]="authUserMenu">
+        <i class="material-icons">account_circle</i>&nbsp;{{username}}
+    </button>
+
+    <span *ngIf="! isLoggedIn" class="bar-section">
+        <button md-button (click)="login()">
+            <i class="material-icons">wc</i> Login
+        </button>
+    </span>
+
+    <span class="bar-section ">JWT since</span>
+    <span *ngIf="!isLoggedIn" class="bar-section">never</span>
+    <button *ngIf="isLoggedIn" md-button (click)="refreshJwt()" mdTooltip="Click to refresh" [mdTooltipPosition]="'below'">
+        {{jwtTime | date:'y-MM-dd HH:mm:ss Z'}}
+    </button>
+
+    <span class="flex-filler"></span>
+
+    <button md-button (click)="toggleDarkTheme()">
+        <i class="material-icons">invert_colors</i>toggle theme
+    </button>
+</md-toolbar>
+
+<md-menu #authUserMenu="mdMenu">
+    <button md-menu-item (click)="logout()">
+        <i class="material-icons">exit_to_app</i>&nbsp;Logout
+    </button>
+</md-menu>

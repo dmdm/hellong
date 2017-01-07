@@ -1,0 +1,41 @@
+@import '~@angular/material/core/style/elevation';
+
+
+:host {
+  position: absolute;
+  display: flex;
+  @include md-elevation(2);
+  @include md-elevation-transition;
+  flex-direction: column;
+}
+
+.app-wmWindow-titlebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4px;
+
+  .material-icons {
+    font-size: 16px;
+    line-height: inherit;
+  }
+
+  [md-icon-button] {
+    line-height: inherit;
+    width: auto;
+    height: auto;
+  }
+}
+
+.app-wmWindow-title {
+  flex: 1 1 auto;
+  vertical-align: middle;
+  padding-bottom: 2px;
+  padding-left: 4px;
+}
+
+.app-wmWindow-content {
+  flex: 1 1 auto;
+  padding: 4px;
+}
+

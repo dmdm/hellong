@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  flex-direction: column;
+
+  .statusbar {
+    width: 100%;
+  }
+}

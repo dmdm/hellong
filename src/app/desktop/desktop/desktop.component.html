@@ -1,0 +1,9 @@
+<div id="desktop-viewport" class="viewport" #viewport>
+    <ul>
+        <li *ngFor="let win of (wmWindowList$|async); let i = index; trackBy: trackWmWindows">{{i}}: {{win.id}}
+            <button md-button (click)="destroyWmWindow(win.id)">Destroy</button>
+        </li>
+    </ul>
+
+    <div #wmWindowsContainer></div>
+</div>

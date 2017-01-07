@@ -1,0 +1,17 @@
+<h1 md-dialog-title><img src="assets/img/earth.png"></h1>
+
+<form (submit)="submit()" #loginForm="ngForm">
+    <md-dialog-content>
+        <div *ngIf="error" class="text-danger">{{error}}</div>
+        <md-input-container>
+            <input md-input #username="ngModel" id="username" name="username" type="text" placeholder="Username" [(ngModel)]="model.username" focused required>
+        </md-input-container>
+        <md-input-container>
+            <input md-input #password="ngModel" id="password" name="password" type="password" placeholder="Password" [(ngModel)]="model.password" required>
+        </md-input-container>
+
+    </md-dialog-content>
+    <md-dialog-actions>
+        <button md-button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+    </md-dialog-actions>
+</form>

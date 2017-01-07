@@ -1,0 +1,48 @@
+/**
+ * Light Theme
+ */
+$light-primary: md-palette($md-light-blue);
+$light-accent: md-palette($md-amber, A200, A100, A400);
+$light-warn: md-palette($md-red, 600);
+
+$light-theme: md-light-theme($light-primary, $light-accent, $light-warn);
+
+
+/**
+ * Dark Theme
+ */
+$dark-primary: md-palette($md-pink, 700, 500, 900);
+$dark-accent: md-palette($md-blue-grey, A200, A100, A400);
+$dark-warn: md-palette($md-deep-orange);
+
+$dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+
+/**
+ * General Variables
+ */
+
+$spacer-outside: 26px;
+$foo-bar-vspace: 64px;
+
+
+/**
+ * Overrides for BS4
+ *
+ * TODO Eventually these should go and replaced by material-only functionality
+ */
+
+$enable-flex: true !default;
+$enable-rounded: false !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: false !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: false !default;
+$enable-print-styles: false !default;
+
+
+
+
+
+

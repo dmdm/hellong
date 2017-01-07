@@ -1,0 +1,31 @@
+:host {
+  flex: 1 1 auto;
+  display: flex;
+  border-style: solid;
+  border-width: 4px;
+  padding: 100px;
+  flex-direction: column;
+
+  .boxcontainer {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+  }
+
+  .box {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 100px;
+    border-style: solid;
+    border-width: 4px;
+  }
+
+  .logbox {
+    flex: 1 1 auto;
+    max-height: 65vh;
+    overflow: auto;
+  }
+  .panel {
+    background-color: rgba(255, 0, 0, .1);
+  }
+}
